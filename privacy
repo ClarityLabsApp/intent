@@ -1,0 +1,179 @@
+# Privacy Policy for INTENT
+
+**Last Updated:** February 7, 2026  
+**Effective Date:** February 7, 2026
+
+---
+
+## Introduction
+
+INTENT ("the App") is operated by Clarity Labs. This Privacy Policy explains how we collect, use, and protect your information when you use our app.
+
+**Key Point:** INTENT is designed for privacy. We do not collect personal information, do not require account creation, and do not track you across other apps or websites.
+
+---
+
+## Information We Collect
+
+### Conversation Data
+- **What:** The messages you send to the philosopher and the responses you receive
+- **Why:** To provide the philosophical dialogue service and maintain conversation continuity
+- **Storage:** Stored securely in our database (Supabase)
+- **Identification:** Associated with an anonymous session ID, not your personal identity
+
+### Session Information
+- **What:** A randomly generated session ID created when you first use the app
+- **Why:** To maintain your conversation history across app sessions
+- **Storage:** Stored locally on your device and in our database
+- **Note:** This ID cannot be used to identify you personally
+
+### Usage Data
+- **What:** Which concepts you've explored and conversation patterns
+- **Why:** To track your philosophical journey within the app
+- **Storage:** Associated with your anonymous session ID
+
+---
+
+## What We Do NOT Collect
+
+We do **NOT** collect:
+- ❌ Your name
+- ❌ Email address
+- ❌ Phone number
+- ❌ Location data
+- ❌ Device identifiers beyond the session ID
+- ❌ Contacts
+- ❌ Photos or camera access
+- ❌ Microphone access
+- ❌ Any personal information
+
+---
+
+## How We Use Your Information
+
+1. **Provide the Service:** Process your messages through our AI system to generate philosophical responses
+2. **Maintain Continuity:** Remember your conversation history and which concepts you've explored
+3. **Improve the App:** Analyze usage patterns (anonymously) to improve the philosophical dialogue quality
+
+---
+
+## Third-Party Services
+
+### OpenAI
+- **Purpose:** Your messages are sent to OpenAI's GPT-4 API to generate philosophical responses
+- **Data Shared:** Your conversation messages and context
+- **Privacy:** Subject to OpenAI's privacy policy: https://openai.com/privacy
+- **Note:** OpenAI does not use data sent via API to train their models
+
+### Supabase
+- **Purpose:** Database and backend infrastructure
+- **Data Stored:** Your anonymous session ID, conversation messages, and concept tracking
+- **Privacy:** Subject to Supabase's privacy policy: https://supabase.com/privacy
+- **Security:** Data encrypted in transit and at rest
+
+---
+
+## Data Retention
+
+- **Conversations:** Stored indefinitely unless you request deletion
+- **Session Data:** Stored indefinitely to maintain continuity across app uses
+- **Deletion:** You may request complete deletion of your data at any time (see "Your Rights" below)
+
+---
+
+## Data Security
+
+We implement appropriate security measures:
+- All data transmitted using HTTPS encryption
+- Database access restricted and secured
+- No data sharing with third parties except as described above (OpenAI, Supabase)
+- Session IDs are randomly generated and cannot identify you personally
+
+---
+
+## Your Rights
+
+You have the right to:
+
+### Access Your Data
+Contact us to request a copy of your conversation data
+
+### Delete Your Data
+Request complete deletion of all data associated with your session:
+- **How:** Email intent.app.contact@proton.me with subject "Data Deletion Request"
+- **Timeline:** We will delete your data within 30 days
+- **Note:** Deletion is permanent and cannot be undone
+
+### Opt-Out
+You can stop using the app at any time. Simply delete the app from your device.
+
+---
+
+## Children's Privacy
+
+INTENT is not intended for children under 13. We do not knowingly collect information from children under 13. If you believe a child under 13 has used the app, please contact us immediately.
+
+---
+
+## Changes to This Policy
+
+We may update this Privacy Policy from time to time. Changes will be posted within the app and on this page. Continued use after changes constitutes acceptance of the updated policy.
+
+---
+
+## Important Disclaimers
+
+### Not Medical or Therapeutic Services
+INTENT provides philosophical dialogue based on Adlerian psychology principles. It is **not**:
+- Medical advice
+- Mental health treatment
+- Therapy or counseling
+- A substitute for professional help
+
+**If you are in crisis or experiencing severe mental health issues, please contact:**
+- Emergency services (911 in US)
+- National Suicide Prevention Lifeline: 988
+- Crisis Text Line: Text HOME to 741741
+
+### Academic/Educational Purpose
+The philosophical approach in INTENT is based on the book "The Courage to Be Disliked" by Ichiro Kishimi and Fumitake Koga, which presents Adlerian psychology concepts through dialogue.
+
+---
+
+## Contact Us
+
+For questions, concerns, or requests regarding this Privacy Policy or your data:
+
+**Email:** intent.app.contact@proton.me  
+**Company:** Clarity Labs  
+**Response Time:** We aim to respond within 7 business days
+
+---
+
+## Consent
+
+By using INTENT, you consent to this Privacy Policy and agree to its terms.
+
+---
+
+## Technical Details (For Transparency)
+
+**Data Flow:**
+1. You send a message in the app
+2. Message is sent to our secure database (Supabase)
+3. Message is processed by OpenAI's API to generate a response
+4. Response is stored in our database and displayed in the app
+5. Concept tracking is updated based on the conversation
+
+**Data Storage Locations:**
+- Database: Supabase (cloud-hosted)
+- AI Processing: OpenAI (cloud-hosted)
+- Local Device: Session ID only
+
+**Open Source:**
+While INTENT itself is not open source, we are committed to transparency. Technical questions about our data handling are welcome.
+
+---
+
+**Last Updated:** February 7, 2026  
+**Version:** 1.0
