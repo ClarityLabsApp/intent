@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>INTENT — Privacy Policy</title>
+<title>INTENT — Pricing</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,6 +31,7 @@
     overflow-x: hidden;
   }
 
+  /* GRAIN OVERLAY */
   body::before {
     content: '';
     position: fixed;
@@ -47,6 +48,7 @@
     flex-direction: column;
     align-items: center;
     padding: 80px 40px 60px;
+    position: relative;
   }
 
   .logo-icon {
@@ -69,49 +71,46 @@
   .headline {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
-    font-size: clamp(32px, 5vw, 48px);
+    font-size: clamp(36px, 5vw, 56px);
     line-height: 1.1;
     text-align: center;
     color: var(--text);
+    max-width: 600px;
     margin-bottom: 16px;
+  }
+
+  .headline em {
+    font-style: italic;
+    color: var(--gold);
   }
 
   .subhead {
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 300;
     color: var(--muted);
     letter-spacing: 0.5px;
     text-align: center;
-    margin-bottom: 16px;
+    max-width: 380px;
+    line-height: 1.6;
+    margin-bottom: 64px;
   }
 
-  .updated {
-    font-size: 12px;
-    color: var(--gold-dim);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-  }
-
+  /* DIVIDER */
   .divider {
     width: 40px;
     height: 1px;
     background: var(--gold-dim);
-    margin: 48px auto;
+    margin: 0 auto 64px;
   }
 
-  /* CONTENT */
-  .content {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 0 40px 80px;
+  /* FREE TIER */
+  .free-tier {
+    text-align: center;
+    padding: 0 40px 48px;
   }
 
-  .section {
-    margin-bottom: 48px;
-  }
-
-  .section-label {
+  .free-label {
+    font-family: 'Jost', sans-serif;
     font-size: 11px;
     font-weight: 400;
     letter-spacing: 4px;
@@ -120,120 +119,274 @@
     margin-bottom: 16px;
   }
 
-  .section h2 {
+  .free-headline {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 400;
     color: var(--text);
-    margin-bottom: 16px;
-    line-height: 1.2;
+    margin-bottom: 8px;
   }
 
-  .section p {
-    font-size: 15px;
+  .free-desc {
+    font-size: 14px;
     color: var(--muted);
-    line-height: 1.8;
-    margin-bottom: 12px;
+    line-height: 1.6;
   }
 
-  .section p strong {
-    color: var(--text);
-    font-weight: 400;
+  /* PRICING CARDS */
+  .cards-wrapper {
+    display: flex;
+    gap: 20px;
+    padding: 0 40px 80px;
+    max-width: 860px;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
-  .section ul {
-    list-style: none;
-    margin: 12px 0 16px;
-  }
-
-  .section ul li {
-    font-size: 15px;
-    color: var(--muted);
-    line-height: 1.8;
-    padding: 6px 0 6px 24px;
+  .card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 380px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 40px 36px;
     position: relative;
+    transition: border-color 0.3s ease;
+  }
+
+  .card:hover {
+    border-color: var(--gold-dim);
+  }
+
+  .card.featured {
+    border-color: var(--gold-dim);
+    background: var(--bg3);
+  }
+
+  .card.featured::before {
+    content: 'MOST CHOSEN';
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--bg);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    padding: 5px 16px;
+    white-space: nowrap;
+  }
+
+  .card-label {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .card.featured .card-label {
+    color: var(--gold);
+  }
+
+  .price-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    font-weight: 300;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .price-main span {
+    font-size: 22px;
+    vertical-align: top;
+    margin-top: 10px;
+    display: inline-block;
+    color: var(--gold);
+  }
+
+  .price-period {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .price-equiv {
+    font-size: 12px;
+    color: var(--gold-dim);
+    margin-bottom: 32px;
+    min-height: 18px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .card-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 28px;
+  }
+
+  .features {
+    list-style: none;
+    margin-bottom: 36px;
+  }
+
+  .features li {
+    font-size: 14px;
+    color: var(--text);
+    padding: 8px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    line-height: 1.4;
     border-bottom: 1px solid var(--border);
   }
 
-  .section ul li:last-child {
+  .features li:last-child {
     border-bottom: none;
   }
 
-  .section ul li::before {
+  .features li::before {
     content: '—';
     color: var(--gold);
-    position: absolute;
-    left: 0;
+    flex-shrink: 0;
     font-size: 12px;
-    top: 9px;
+    margin-top: 2px;
   }
 
-  .highlight-box {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-left: 2px solid var(--gold-dim);
-    padding: 24px 28px;
-    margin: 24px 0;
-    border-radius: 2px;
-  }
-
-  .highlight-box p {
-    margin-bottom: 0;
-    font-size: 14px;
-  }
-
-  .contact-box {
-    background: var(--bg3);
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    padding: 32px 36px;
-    margin-top: 48px;
-    text-align: center;
-  }
-
-  .contact-box .section-label {
-    margin-bottom: 12px;
-  }
-
-  .contact-box p {
-    font-size: 14px;
+  .features li.muted {
     color: var(--muted);
-    margin-bottom: 16px;
   }
 
-  .contact-box a {
-    color: var(--gold);
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 14px 24px;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
     text-decoration: none;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-    border-bottom: 1px solid var(--gold-dim);
-    padding-bottom: 2px;
-    transition: color 0.2s;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid var(--gold-dim);
+    color: var(--gold);
+    background: transparent;
   }
 
-  .contact-box a:hover {
-    color: var(--gold-light);
+  .btn:hover {
+    background: var(--gold);
+    color: var(--bg);
+    border-color: var(--gold);
+  }
+
+  .btn.primary {
+    background: var(--gold);
+    color: var(--bg);
+    border-color: var(--gold);
+  }
+
+  .btn.primary:hover {
+    background: var(--gold-light);
     border-color: var(--gold-light);
   }
 
-  /* NAV */
-  .back-nav {
+  /* COMPARISON NOTE */
+  .note-section {
     text-align: center;
-    padding: 0 40px 48px;
+    padding: 0 40px 80px;
+    max-width: 520px;
+    margin: 0 auto;
   }
 
-  .back-nav a {
+  .note-section p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+
+  .note-section p strong {
+    color: var(--text);
+    font-weight: 400;
+  }
+
+  /* PHILOSOPHY NOTE */
+  .philosophy {
+    border-top: 1px solid var(--border);
+    padding: 60px 40px;
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .philosophy blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--text);
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .philosophy cite {
     font-size: 12px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
     color: var(--gold-dim);
-    text-decoration: none;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 3px;
-    transition: color 0.2s;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-style: normal;
   }
 
-  .back-nav a:hover { color: var(--gold); }
+  /* FAQ */
+  .faq {
+    padding: 60px 40px 80px;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .faq-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+  }
+
+  .faq-item:first-of-type {
+    border-top: 1px solid var(--border);
+  }
+
+  .faq-q {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  .faq-a {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
 
   /* FOOTER */
   footer {
@@ -250,14 +403,16 @@
 
   @media (max-width: 640px) {
     header { padding: 60px 24px 40px; }
-    .content { padding: 0 24px 60px; }
-    .back-nav { padding: 0 24px 40px; }
+    .cards-wrapper { padding: 0 24px 60px; flex-direction: column; align-items: center; }
+    .card { min-width: unset; width: 100%; max-width: 100%; }
+    .note-section, .philosophy, .faq { padding-left: 24px; padding-right: 24px; }
   }
 </style>
 </head>
 <body>
 
 <header>
+  <!-- SVG icon matching INTENT's philosopher symbol -->
   <svg class="logo-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M40 8 L68 62 Q68 70 40 70 Q12 70 12 62 Z" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
     <ellipse cx="40" cy="62" rx="28" ry="8" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
@@ -266,112 +421,103 @@
 
   <div class="logo-text">Intent</div>
 
-  <h1 class="headline">Privacy Policy</h1>
-  <p class="subhead">Clarity Labs · INTENT App</p>
-  <span class="updated">Last updated: March 2026</span>
+  <h1 class="headline">The philosopher<br>that <em>won't</em> let<br>you lie to yourself.</h1>
+
+  <p class="subhead">One honest conversation. No validation. No comfort. No five-step plans.</p>
 </header>
 
 <div class="divider"></div>
 
-<div class="back-nav">
-  <a href="index.html">← Back to INTENT</a>
+<!-- FREE TIER -->
+<div class="free-tier">
+  <div class="free-label">Start Free</div>
+  <div class="free-headline">Your first 20 messages are free.</div>
+  <p class="free-desc">Enough to have one real conversation with the philosopher.<br>No credit card. No account. No expiry.</p>
 </div>
 
-<div class="content">
+<!-- PRICING CARDS -->
+<div class="cards-wrapper">
 
-  <div class="highlight-box">
-    <p><strong>The short version:</strong> INTENT does not require an account. We do not collect your name, email, or any identifying information. Your conversations are stored anonymously using a session ID on your device.</p>
-  </div>
-
-  <!-- 1. WHO WE ARE -->
-  <div class="section">
-    <div class="section-label">01</div>
-    <h2>Who We Are</h2>
-    <p>INTENT is developed by <strong>Clarity Labs</strong>, founded by Phil Sidler, a psychologist based in Zürich, Switzerland.</p>
-    <p>Contact: <strong>intent.app.contact@proton.me</strong></p>
-  </div>
-
-  <!-- 2. WHAT WE COLLECT -->
-  <div class="section">
-    <div class="section-label">02</div>
-    <h2>What We Collect</h2>
-    <p>INTENT is designed to collect as little data as possible. Here is exactly what is stored:</p>
-    <ul>
-      <li><strong>Anonymous session ID</strong> — a randomly generated identifier used to maintain your conversation history. It is not linked to your name, email, or Apple ID.</li>
-      <li><strong>Conversation messages</strong> — the text of your exchanges with the philosopher, stored to provide continuity across sessions.</li>
-      <li><strong>Commitments</strong> — the commitments you choose to record within the app.</li>
-      <li><strong>Session metadata</strong> — timestamps and usage patterns to improve the experience.</li>
+  <!-- MONTHLY -->
+  <div class="card">
+    <div class="card-label">Monthly</div>
+    <div class="price-main"><span>$</span>7.99</div>
+    <div class="price-period">per month</div>
+    <div class="price-equiv">&nbsp;</div>
+    <div class="card-divider"></div>
+    <ul class="features">
+      <li>Unlimited philosopher conversations</li>
+      <li>Commitment tracking & accountability</li>
+      <li>Adlerian concept library</li>
+      <li>Session continuity across conversations</li>
+      <li>Cancel anytime</li>
     </ul>
-    <p>We do <strong>not</strong> collect your name, email address, phone number, location, or any other personally identifying information.</p>
+    <a href="#" class="btn">Start Monthly</a>
   </div>
 
-  <!-- 3. HOW WE USE IT -->
-  <div class="section">
-    <div class="section-label">03</div>
-    <h2>How We Use Your Data</h2>
-    <p>Your data is used solely to provide the INTENT experience:</p>
-    <ul>
-      <li>To maintain conversation continuity between sessions</li>
-      <li>To track commitments you have made within the app</li>
-      <li>To improve the quality of the philosopher's responses over time</li>
+  <!-- ANNUAL -->
+  <div class="card featured">
+    <div class="card-label">Annual</div>
+    <div class="price-main"><span>$</span>59.99</div>
+    <div class="price-period">per year</div>
+    <div class="price-equiv">$5.00 / month — save 37%</div>
+    <div class="card-divider"></div>
+    <ul class="features">
+      <li>Everything in Monthly</li>
+      <li>Priority access to new features</li>
+      <li>Best value for committed practice</li>
+      <li>Billed once annually</li>
+      <li>Cancel anytime</li>
     </ul>
-    <p>We do not sell your data. We do not use your conversations for advertising. We do not share your data with third parties except as described below.</p>
+    <a href="#" class="btn primary">Start Annual</a>
   </div>
 
-  <!-- 4. THIRD PARTIES -->
-  <div class="section">
-    <div class="section-label">04</div>
-    <h2>Third-Party Services</h2>
-    <p>INTENT uses the following third-party services to function:</p>
-    <ul>
-      <li><strong>OpenAI API</strong> — your messages are sent to OpenAI to generate the philosopher's responses. OpenAI processes these anonymously. See OpenAI's privacy policy at openai.com/privacy.</li>
-      <li><strong>Supabase</strong> — our database provider, used to store your anonymous session data securely. See supabase.com/privacy.</li>
-      <li><strong>Apple</strong> — subscription billing is handled entirely by Apple. We do not receive or store your payment information.</li>
-    </ul>
+</div>
+
+<!-- COMPARISON NOTE -->
+<div class="note-section">
+  <p>Comparable apps charge <strong>$9.99–$14.99/month</strong> to tell you you're doing great. INTENT charges less to tell you the truth.</p>
+  <p>Subscriptions are managed through Apple. You can cancel at any time in your iPhone settings.</p>
+</div>
+
+<!-- PHILOSOPHY QUOTE -->
+<div class="philosophy">
+  <blockquote>"The philosopher does not try to fix you. It asks why you want to be fixed in the first place."</blockquote>
+  <cite>— INTENT</cite>
+</div>
+
+<!-- FAQ -->
+<div class="faq">
+  <div class="faq-title">Questions</div>
+
+  <div class="faq-item">
+    <div class="faq-q">What happens when my 20 free messages run out?</div>
+    <div class="faq-a">You'll be prompted to subscribe. You keep all your conversation history and commitments. Nothing is lost.</div>
   </div>
 
-  <!-- 5. DATA RETENTION -->
-  <div class="section">
-    <div class="section-label">05</div>
-    <h2>Data Retention</h2>
-    <p>Your conversation data is retained as long as your session ID exists on your device. If you delete the app, your session ID is removed and your data becomes inaccessible.</p>
-    <p>Because we do not collect identifying information, we are unable to retrieve or delete specific user data upon request — there is no account to look up. Deleting the app effectively deletes your data.</p>
+  <div class="faq-item">
+    <div class="faq-q">Is this therapy?</div>
+    <div class="faq-a">No. INTENT is a philosophical tool inspired by Adlerian psychology. It is not a substitute for professional mental health support. If you are in crisis, please contact a professional.</div>
   </div>
 
-  <!-- 6. CHILDREN -->
-  <div class="section">
-    <div class="section-label">06</div>
-    <h2>Children's Privacy</h2>
-    <p>INTENT is not intended for users under the age of 17. The app deals with psychological self-examination and philosophical content that is not appropriate for children. We do not knowingly collect data from anyone under 17.</p>
+  <div class="faq-item">
+    <div class="faq-q">What is Adlerian psychology?</div>
+    <div class="faq-a">Alfred Adler believed that people are not determined by their past or their circumstances — they choose how to respond. INTENT is built on this premise: your problems serve a purpose, and until you see what that purpose is, nothing changes. Popularised in the book The Courage to Be Disliked.</div>
   </div>
 
-  <!-- 7. NOT THERAPY -->
-  <div class="section">
-    <div class="section-label">07</div>
-    <h2>Not a Medical or Therapeutic Service</h2>
-    <div class="highlight-box">
-      <p>INTENT is a philosophical tool inspired by Adlerian psychology. It is <strong>not a substitute for professional mental health care, therapy, or medical advice</strong>. If you are experiencing a mental health crisis, please contact a qualified professional or emergency services.</p>
-    </div>
+  <div class="faq-item">
+    <div class="faq-q">Can I cancel my subscription?</div>
+    <div class="faq-a">Yes. At any time through your iPhone Settings → Apple ID → Subscriptions. You retain access until the end of your billing period.</div>
   </div>
 
-  <!-- 8. CHANGES -->
-  <div class="section">
-    <div class="section-label">08</div>
-    <h2>Changes to This Policy</h2>
-    <p>We may update this privacy policy from time to time. Any changes will be posted at this URL. Continued use of the app following any changes constitutes acceptance of the updated policy.</p>
+  <div class="faq-item">
+    <div class="faq-q">Who built this?</div>
+    <div class="faq-a">Phil Sidler, a psychologist from Zürich, Switzerland. INTENT is built by Clarity Labs.</div>
   </div>
-
-  <!-- CONTACT -->
-  <div class="contact-box">
-    <div class="section-label">Questions</div>
-    <p>If you have any questions about this privacy policy or how your data is handled, please contact us.</p>
-    <a href="mailto:intent.app.contact@proton.me">intent.app.contact@proton.me</a>
-  </div>
-
 </div>
 
 <footer>
-  <p>© 2026 Clarity Labs &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="index.html">INTENT</a> &nbsp;·&nbsp; <a href="mailto:intent.app.contact@proton.me">Contact</a></p>
+  <p>© 2026 Clarity Labs &nbsp;·&nbsp; <a href="https://claritylabsapp.github.io/intent/">Privacy Policy</a> &nbsp;·&nbsp; <a href="mailto:intent.app.contact@proton.me">Contact</a></p>
 </footer>
 
 </body>
