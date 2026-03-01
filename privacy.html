@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INTENT — Privacy Policy</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8D08A;
+    --gold-dim: #8A6E2F;
+    --bg: #111110;
+    --bg2: #1A1916;
+    --bg3: #222118;
+    --text: #E8E0D0;
+    --muted: #8A8070;
+    --border: #2E2B22;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.4;
+  }
+
+  /* HEADER */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 40px 60px;
+  }
+
+  .logo-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+
+  .logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 8px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+
+  .headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.1;
+    text-align: center;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+
+  .subhead {
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .updated {
+    font-size: 12px;
+    color: var(--gold-dim);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+  }
+
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold-dim);
+    margin: 48px auto;
+  }
+
+  /* CONTENT */
+  .content {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+
+  .section {
+    margin-bottom: 48px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .section p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+
+  .section p strong {
+    color: var(--text);
+    font-weight: 400;
+  }
+
+  .section ul {
+    list-style: none;
+    margin: 12px 0 16px;
+  }
+
+  .section ul li {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.8;
+    padding: 6px 0 6px 24px;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section ul li:last-child {
+    border-bottom: none;
+  }
+
+  .section ul li::before {
+    content: '—';
+    color: var(--gold);
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+    top: 9px;
+  }
+
+  .highlight-box {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-left: 2px solid var(--gold-dim);
+    padding: 24px 28px;
+    margin: 24px 0;
+    border-radius: 2px;
+  }
+
+  .highlight-box p {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .contact-box {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 32px 36px;
+    margin-top: 48px;
+    text-align: center;
+  }
+
+  .contact-box .section-label {
+    margin-bottom: 12px;
+  }
+
+  .contact-box p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .contact-box a {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--gold-dim);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+
+  .contact-box a:hover {
+    color: var(--gold-light);
+    border-color: var(--gold-light);
+  }
+
+  /* NAV */
+  .back-nav {
+    text-align: center;
+    padding: 0 40px 48px;
+  }
+
+  .back-nav a {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 3px;
+    transition: color 0.2s;
+  }
+
+  .back-nav a:hover { color: var(--gold); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 40px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+  }
+
+  footer a { color: var(--gold-dim); text-decoration: none; }
+  footer a:hover { color: var(--gold); }
+
+  @media (max-width: 640px) {
+    header { padding: 60px 24px 40px; }
+    .content { padding: 0 24px 60px; }
+    .back-nav { padding: 0 24px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <svg class="logo-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M40 8 L68 62 Q68 70 40 70 Q12 70 12 62 Z" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
+    <ellipse cx="40" cy="62" rx="28" ry="8" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
+    <circle cx="40" cy="36" r="3" fill="#C9A84C"/>
+  </svg>
+
+  <div class="logo-text">Intent</div>
+
+  <h1 class="headline">Privacy Policy</h1>
+  <p class="subhead">Clarity Labs · INTENT App</p>
+  <span class="updated">Last updated: March 2026</span>
+</header>
+
+<div class="divider"></div>
+
+<div class="back-nav">
+  <a href="index.html">← Back to INTENT</a>
+</div>
+
+<div class="content">
+
+  <div class="highlight-box">
+    <p><strong>The short version:</strong> INTENT does not require an account. We do not collect your name, email, or any identifying information. Your conversations are stored anonymously using a session ID on your device.</p>
+  </div>
+
+  <!-- 1. WHO WE ARE -->
+  <div class="section">
+    <div class="section-label">01</div>
+    <h2>Who We Are</h2>
+    <p>INTENT is developed by <strong>Clarity Labs</strong>, founded by Phil Sidler, a psychologist based in Zürich, Switzerland.</p>
+    <p>Contact: <strong>intent.app.contact@proton.me</strong></p>
+  </div>
+
+  <!-- 2. WHAT WE COLLECT -->
+  <div class="section">
+    <div class="section-label">02</div>
+    <h2>What We Collect</h2>
+    <p>INTENT is designed to collect as little data as possible. Here is exactly what is stored:</p>
+    <ul>
+      <li><strong>Anonymous session ID</strong> — a randomly generated identifier used to maintain your conversation history. It is not linked to your name, email, or Apple ID.</li>
+      <li><strong>Conversation messages</strong> — the text of your exchanges with the philosopher, stored to provide continuity across sessions.</li>
+      <li><strong>Commitments</strong> — the commitments you choose to record within the app.</li>
+      <li><strong>Session metadata</strong> — timestamps and usage patterns to improve the experience.</li>
+    </ul>
+    <p>We do <strong>not</strong> collect your name, email address, phone number, location, or any other personally identifying information.</p>
+  </div>
+
+  <!-- 3. HOW WE USE IT -->
+  <div class="section">
+    <div class="section-label">03</div>
+    <h2>How We Use Your Data</h2>
+    <p>Your data is used solely to provide the INTENT experience:</p>
+    <ul>
+      <li>To maintain conversation continuity between sessions</li>
+      <li>To track commitments you have made within the app</li>
+      <li>To improve the quality of the philosopher's responses over time</li>
+    </ul>
+    <p>We do not sell your data. We do not use your conversations for advertising. We do not share your data with third parties except as described below.</p>
+  </div>
+
+  <!-- 4. THIRD PARTIES -->
+  <div class="section">
+    <div class="section-label">04</div>
+    <h2>Third-Party Services</h2>
+    <p>INTENT uses the following third-party services to function:</p>
+    <ul>
+      <li><strong>OpenAI API</strong> — your messages are sent to OpenAI to generate the philosopher's responses. OpenAI processes these anonymously. See OpenAI's privacy policy at openai.com/privacy.</li>
+      <li><strong>Supabase</strong> — our database provider, used to store your anonymous session data securely. See supabase.com/privacy.</li>
+      <li><strong>Apple</strong> — subscription billing is handled entirely by Apple. We do not receive or store your payment information.</li>
+    </ul>
+  </div>
+
+  <!-- 5. DATA RETENTION -->
+  <div class="section">
+    <div class="section-label">05</div>
+    <h2>Data Retention</h2>
+    <p>Your conversation data is retained as long as your session ID exists on your device. If you delete the app, your session ID is removed and your data becomes inaccessible.</p>
+    <p>Because we do not collect identifying information, we are unable to retrieve or delete specific user data upon request — there is no account to look up. Deleting the app effectively deletes your data.</p>
+  </div>
+
+  <!-- 6. CHILDREN -->
+  <div class="section">
+    <div class="section-label">06</div>
+    <h2>Children's Privacy</h2>
+    <p>INTENT is not intended for users under the age of 17. The app deals with psychological self-examination and philosophical content that is not appropriate for children. We do not knowingly collect data from anyone under 17.</p>
+  </div>
+
+  <!-- 7. NOT THERAPY -->
+  <div class="section">
+    <div class="section-label">07</div>
+    <h2>Not a Medical or Therapeutic Service</h2>
+    <div class="highlight-box">
+      <p>INTENT is a philosophical tool inspired by Adlerian psychology. It is <strong>not a substitute for professional mental health care, therapy, or medical advice</strong>. If you are experiencing a mental health crisis, please contact a qualified professional or emergency services.</p>
+    </div>
+  </div>
+
+  <!-- 8. CHANGES -->
+  <div class="section">
+    <div class="section-label">08</div>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. Any changes will be posted at this URL. Continued use of the app following any changes constitutes acceptance of the updated policy.</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-box">
+    <div class="section-label">Questions</div>
+    <p>If you have any questions about this privacy policy or how your data is handled, please contact us.</p>
+    <a href="mailto:intent.app.contact@proton.me">intent.app.contact@proton.me</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Clarity Labs &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="index.html">INTENT</a> &nbsp;·&nbsp; <a href="mailto:intent.app.contact@proton.me">Contact</a></p>
+</footer>
+
+</body>
+</html>
